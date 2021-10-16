@@ -17,20 +17,36 @@
             background-color: white;
         }
         a {
-            text-decoration: none;
+            text-decoration: none !important;
+            color:black;
         }
         h1 {
             font-family: 'greycliff_cf';
-            color: #E57527;
+            color:white;
             font-weight: bold;
-            border-left: 6px solid #E57527;
+            border-radius: 8px;
             padding: 12px;
-            background-color: #fff4dd;
-            margin: 20px 0px;
+            background-color: black;
+            width:200px;
+            text-align: center;
+            margin: 0px;
+            height: 50px;
+            line-height: 33px;
         }
-        p {
+        .bar {
             font-family: 'greycliff_cf';
             color: black;
+            padding: 10px;
+            background-color: white;
+            margin: 0px 10px 0px 0px;
+            font-size: 20px;
+            box-shadow:1px 1px 2px 1px rgba(68, 68, 68, 0.3);
+            border-radius: 0px 4px 4px 0px;
+            position:relative;
+            top:-20px;
+        }
+        .bar:hover {
+            background-color: whitesmoke;
         }
         .button {
             color:#E57527;
@@ -52,6 +68,7 @@
             width:100%;
             margin:0 auto;
             height: 150px;
+            border-radius: 10px;
         }
         .banner_font {
             color:white;
@@ -72,25 +89,33 @@
 </head>
 <body>
 <div style="max-width: 70%; margin: 0 auto;">
-    <div class="banner">
+    <div class="banner" style="margin:20px auto;">
         <a href="index.html">
-            <p class="banner_font">OrangePig Station</p>
+            <p class="banner_font">OrangePig Station
             <!-- <img src="images/orangepig_logo.png" class="banner_logo"> -->
+            </p>
         </a>
     </div>
     <div>
-        <h1>Grammar</h1>
-        <a href="grammarPage/box-shadowPage.html">
-            <p class="button">box-shadow</p>
-        </a>
-        <a href="grammarPage/gradientsPage.html">
-            <p class="button">gradients</p>
-        </a>
-
-        <h1>Function</h1>
-        <a href="functionPage/ShowDate.html">
-            <p class="button">ShowDate</p>
-        </a>
+        <h1 style="background-color: rgb(107,197,80);">Grammar</h1>
+        <p class="bar" style="border-left: 9px solid rgb(107,197,80);">
+            <a href="grammarPage/box-shadowPage.html">
+                box-shadow: An article to help you understand the features better.
+            </a>
+        </p>
+        <p class="bar" style="border-left: 9px solid rgb(107,197,80);">
+            <a href="grammarPage/gradientsPage.html">
+                gradients: Teach you how to control gradients in CSS.
+            </a>
+        </p>
+    </div>
+    <div>
+        <h1 style="background-color: rgb(4,173,255);">Function</h1>
+        <p class="bar" style="border-left: 9px solid rgb(4,173,255);">
+            <a href="functionPage/ShowDate.html">
+              ShowDate: A simple HTML to show the current time.
+            </a>
+        </p>
     </div>
 </div>
 </body>
