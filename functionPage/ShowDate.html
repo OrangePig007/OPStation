@@ -15,6 +15,20 @@
         .date_button:hover {
             box-shadow: 0px 0px 20px #02d3c1 inset;
         }
+        .bar_title {
+            font-family: 'greycliff_cf';
+            color:white;
+            font-weight: bold;
+            border-radius: 8px;
+            padding: 12px;
+            background-color: black;
+            width:200px;
+            text-align: center;
+            margin: 0px;
+            height: 50px;
+            line-height: 33px;
+            background-color: #18aa9e;
+        }
         .tip {
             position:fixed;
             border:1px solid #18aa9e;
@@ -22,15 +36,30 @@
             width: 150px;
             border-radius: 9px;
             bottom: 0;
-            left: auto;
+            right: 5%;
+            background-color: white;
         }
         .mes {
             background-color: #18aa9e;
             color:white;
             padding: 150px 0px;
-            margin:0 auto;
+            margin:0px auto;
             text-align: center;
             font-size: 60px;
+        }
+        .bar {
+            font-family: 'greycliff_cf';
+            color: black;
+            padding: 10px;
+            background-color: white;
+            margin: 0px 10px 0px 0px;
+            font-size: 20px;
+            box-shadow:1px 1px 2px 1px rgba(68, 68, 68, 0.3);
+            border-radius: 0px 4px 4px 0px;
+            position:relative;
+            top:-20px;
+            border-left: 9px solid #18aa9e;
+            
         }
     </style>
     <head>
@@ -38,18 +67,61 @@
         <title>ShowDate</title>
         <script>
             function displayDate(){
-                document.getElementById("Date").innerHTML=Date();
+                var d = new Date();
+                var time = d.getHours(); //不同时间段的打招呼
+                if (time<6)
+                {
+                    var greeting = "<b>凌晨好！</b>";
+                }
+                else if (time>=7 && time<10)
+                {
+                	var greeting = "<b>早上好！</b>";
+                }
+                else if (time>=11 && time<14)
+                {
+                	var greeting = "<b>中午好！</b>";
+                }
+                else if (time>=15 && time<17)
+                {
+                	var greeting = "<b>下午好！</b>";
+                }
+                else if (time>=18 && time<20)
+                {
+                	var greeting = "<b>傍晚好！</b>";
+                }
+                else
+                {
+                	var greeting = "<b>晚上好！</b>";
+                }
+                var weekday=new Array(7); //用数组实现星期的转换
+                weekday[0]="星期日";
+                weekday[1]="星期一";
+                weekday[2]="星期二";
+                weekday[3]="星期三";
+                weekday[4]="星期四";
+                weekday[5]="星期五";
+                weekday[6]="星期六";
+
+                document.getElementById("date").innerHTML=(d);
+                document.getElementById("day").innerHTML=(greeting+"当前时间为"+d.getFullYear()+"年"+(d.getMonth()+1)+"月"+d.getDate()+"日"+weekday[d.getDay()]+d.getHours()+"时"+d.getMinutes()+"分"+d.getSeconds()+"秒"+d.getMilliseconds()+"毫秒，距离1970年1月1日已过"+d.getTime()+"毫秒，与格林尼治标准时间相差"+(d.getTimezoneOffset()/60)+"小时。");
             }
         </script>
     </head>
 
     <body>
+    <div>
         <h1 class="mes">点击下方按钮将会显示当前时间</h1>
         <p style="padding-top: 40px; margin:0 auto; text-align: center;font-size: 30px;">当前的时间为</p>
-        <p id="Date" style="text-align: center;"></p>
+        <p id="date" style="text-align: center;"></p>
         <div style="text-align: center;">
             <button class="date_button" onclick="displayDate()" >显示</button></div>
 
+        <div style="width: 70%; margin: 30px auto;">
+            <h1 class="bar_title">详细信息</h1>
+            <p id="day" class="bar">点击上方按钮显示。</p>
+                    
+        </div>
+    </div>
         <div>
             <p class="tip">适合的应用场景：<br>如果您在滑雪时由于雪崩被埋在雪堆里不知道现在是何时？没关系！只需打开您的手机，进入本网站就可轻松确定当前时间啦。</p>
         </div>
