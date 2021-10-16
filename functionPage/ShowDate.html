@@ -15,6 +15,23 @@
         .date_button:hover {
             box-shadow: 0px 0px 20px #02d3c1 inset;
         }
+        .tip {
+            position:fixed;
+            border:1px solid #18aa9e;
+            padding: 5px;
+            width: 150px;
+            border-radius: 9px;
+            bottom: 0;
+            left: auto;
+        }
+        .mes {
+            background-color: #18aa9e;
+            color:white;
+            padding: 150px 0px;
+            margin:0 auto;
+            text-align: center;
+            font-size: 60px;
+        }
     </style>
     <head>
         <meta charset="utf-8">
@@ -27,10 +44,14 @@
     </head>
 
     <body>
-        <h1 style="background-color: #18aa9e; color:white; padding: 150px 0px; margin:0 auto; text-align: center; font-size: 60px;">点击下方按钮将会显示当前时间</h1>
+        <h1 class="mes">点击下方按钮将会显示当前时间</h1>
         <p style="padding-top: 40px; margin:0 auto; text-align: center;font-size: 30px;">当前的时间为</p>
         <p id="Date" style="text-align: center;"></p>
         <div style="text-align: center;">
             <button class="date_button" onclick="displayDate()" >显示</button></div>
+
+        <div>
+            <p class="tip">适合的应用场景：<br>如果您在滑雪时由于雪崩被埋在雪堆里不知道现在是何时？没关系！只需打开您的手机，进入本网站就可轻松确定当前时间啦。</p>
+        </div>
     </body>
 </html>
