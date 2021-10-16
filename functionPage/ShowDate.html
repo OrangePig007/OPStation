@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        .date_button {
+            color:#18aa9e;
+            border:2px solid #18aa9e;
+            font-size: 20px;
+            background-color: #fff;
+            border-radius: 30px;
+            padding:10px;
+            margin: 20px auto;
+            width:100px;
+            text-align: center;
+        }
+        .date_button:hover {
+            box-shadow: 0px 0px 20px #02d3c1 inset;
+        }
+    </style>
+    <head>
+        <meta charset="utf-8">
+        <title>ShowDate</title>
+        <script>
+            function displayDate(){
+                document.getElementById("Date").innerHTML=Date();
+            }
+        </script>
+    </head>
+
+    <body>
+        <h1 style="background-color: #18aa9e; color:white; padding: 150px 0px; margin:0 auto; text-align: center; font-size: 60px;">点击下方按钮将会显示当前时间</h1>
+        <p style="padding-top: 40px; margin:0 auto; text-align: center;font-size: 30px;">当前的时间为</p>
+        <p id="Date" style="text-align: center;"></p>
+        <div style="text-align: center;">
+            <button class="date_button" onclick="displayDate()" >显示</button></div>
+    </body>
+</html>

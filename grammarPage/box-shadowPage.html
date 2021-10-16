@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<style>
+        @font-face {
+            font-family: 'greycliff_cf';
+            src:url('../fonts/greycliffcf-bold-webfont.ttf')format('truetype');
+            font-weight: bold;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'greycliff_cf';
+            src: url('../fonts/greycliffcf-medium-webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+    .banner {
+        font-family: 'greycliff_cf';
+        font-weight: bold;
+        font-size: 20px;
+        color:#1d1d1f;
+        background-color: #fff;
+        border-radius: 30px;
+        padding:20px;
+        border:2px solid #1d1d1f;
+        box-shadow: 5px 5px #1d1d1f;
+        margin: 20px auto;
+        
+    }
+    .banner:hover{
+        box-shadow: 0px 0px 30px #02d3c1 inset;
+        color:#18aa9e;
+        border:2px solid #18aa9e;
+
+    }
+    p {
+        font-size: 17px;
+        color:black;
+        font-family: 'greycliff_cf';
+    }
+    .title {
+        border-left: 6px solid #0072b3;
+        padding: 12px;
+        background-color: #ddeaff;
+        margin: 20px 0px;
+        font-family: 'greycliff_cf';
+        font-weight: bold;
+        font-size:20px;
+    }
+    .yellowsquare {
+        background-image: linear-gradient(to bottom left, #fffaec 25%, #fccf30 28%, #fffaec 32%, #fccf30 35%, #fccf30 45%, #fdec5e 50%, #fdec5e 60%, #fff4bd 65%, #fff4bd 75%, #fdec5e 80%);
+        width: 100px;
+        height: 50px;
+        border: 2px solid #1d1d1f;
+        border-radius: 20px;
+        text-align: center;
+        line-height: 50px;
+        margin: 20px auto;
+        font-family: 'greycliff_cf';
+        font-weight: bold;
+    }
+    .code {
+        background-color: #474747;
+        color: #ffffff;
+        border: 1px solid #333333;
+        font-family: monospace;
+        font-size: 16px;
+        border-radius: 3px;
+        padding: 0px 5px;
+    }
+    .examp {
+        color:#18aa9e;
+        border:2px solid #18aa9e;
+        font-size: 20px;
+        background-color: #fff;
+        border-radius: 30px;
+        padding:10px;
+        margin: 20px auto;
+        width:100px;
+        text-align: center;
+        font-family: 'greycliff_cf';
+        font-weight: bold;
+    }
+    .examp:hover {
+        box-shadow: 0px 0px 20px #02d3c1 inset;
+    }
+</style>
+
+<head>
+    <title>box-shadow</title>
+    <div class="banner" style="width:300px; text-align: center;">This is a Box.</div>
+</head>
+
+<body>
+    <div style="max-width: 70%; margin: 0 auto;">
+        <p>This is an article about box-shadow CSS effects.</p>
+        <p>The grammar of box-shadow should be h-shadow v-shadow blur spread color inset.</p>
+        <p>This is a normal square from Brawl Stars game Exclusive Pin.</p>
+        <div class="yellowsquare" >Sample</div>
+        <p>Now we get to add some features on it.</p>
+    
+        <div class="title">1. Position</div>
+        <p>The first two values define its positon. One is left and right, the other is up and down.</p>
+        <p>Let's try <span class="code">box-shadow:5px 0px blue;</span> first. BTW the value can be negative.</p>
+        <div class="yellowsquare" style="box-shadow:5px 0px blue;">Right</div>
+        <p>Try negative value.</p>
+        <div class="yellowsquare" style="box-shadow:-5px 0px blue;">Left</div>
+        <p>Now its the second value's turn. Let's set it <span class="code">box-shadow:0px 5px blue;</span>.</p>
+        <div class="yellowsquare" style="box-shadow:0px 5px blue;">Down</div>
+        <p>Sorry but maybe you should try negative value by yourself.</p>
+    
+        <div class="title">2. Blur</div>
+        <p>What if a shadow doesn't blur. It looks kinda unatural.</p>
+        <p>So why not try set a blur value of it? Let's set it <span class="code">box-shadow:5px 5px 5px blue;</span>.</p>
+        <div class="yellowsquare" style="box-shadow:5px 5px 5px blue;">Blur</div>
+        <p>What if it was set to a negative value?</p>
+        <p>Don't try that meaningless action cuz I will tell you that the whole box-shadow effect would be gone.</p>
+        <div class="yellowsquare" style="box-shadow:5px 5px -5px blue;">Anti-Blur</div>
+        <p>See! How boring!</p>
+    
+        <div class="title">3. Color</div>
+        <p>This is boring again, because as it said, it's just simply change another color...</p>
+        <div class="yellowsquare" style="box-shadow:5px 5px 5px red;">Red</div>
+    
+        <div class="title">4. Spread</div>
+        <p>To be fair, it's kind of like adding completely opaque thickness to a shadow.</p>
+        <div class="yellowsquare" style="box-shadow:0px 0px 0px 10px blue;">Spread</div>
+        <p>Remember, only the fourth value stands for its thickness.</p>
+    
+    
+        <div class="title">5. Inset</div>
+        <p>Frankly, we seldom use it, because making shadow inset is not that good-looking.</p>
+        <div class="yellowsquare" style="box-shadow:5px 5px 5px 5px blue inset;">Inset</div>
+        <p>We have put all values on this square.</p>
+            
+        <div class="title">Example</div>
+        <p>Now I will show you a cool button made with box-shadow effect, sometimes inset can be good.</p>
+        <div class="examp">Hover</div>
+        <p>Next let's talk about another cool CSS3 effect - Gradients.</p>
+        <p>See you sooooooon!</p>
+    </div>
+</body>
