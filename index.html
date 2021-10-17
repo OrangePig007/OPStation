@@ -1,117 +1,39 @@
 <!DOCTYPE html>
 <head>
+    <meta charset="utf-8" />
+    <link type="text/css" rel="styleSheet" href="style.css" />
     <style>
-        @font-face {
-            font-family: 'greycliff_cf';
-            src:url('fonts/greycliffcf-bold-webfont.ttf')format('truetype');
-            font-weight: bold;
-            font-style: normal;
-        }
-        @font-face {
-            font-family: 'greycliff_cf';
-            src: url('fonts/greycliffcf-medium-webfont.ttf') format('truetype');
-            font-weight: normal;
-            font-style: normal;
-        }
         body {
             background-color: white;
-        }
-        a {
-            text-decoration: none !important;
-            color:black;
-        }
-        h1 {
-            font-family: 'greycliff_cf';
-            color:white;
-            font-weight: bold;
-            border-radius: 8px;
-            padding: 12px;
-            background-color: black;
-            width:200px;
-            text-align: center;
-            margin: 0px;
-            height: 50px;
-            line-height: 33px;
-        }
-        .bar {
-            font-family: 'greycliff_cf';
-            color: black;
-            padding: 10px;
-            background-color: white;
-            margin: 0px 10px 0px 0px;
-            font-size: 20px;
-            box-shadow:1px 1px 2px 1px rgba(68, 68, 68, 0.3);
-            border-radius: 0px 4px 4px 0px;
-            position:relative;
-            top:-20px;
-        }
-        .bar:hover {
-            background-color: whitesmoke;
-        }
-        .button {
-            color:#E57527;
-            border:2px solid #E57527;
-            font-size: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            padding:10px;
-            margin:10px auto;
-            width:auto;
-            text-align: center;
-            display:inline-block;
-        }
-        .button:hover {
-            box-shadow: 0px 0px 20px #E57527 inset;
-        }
-        .banner {
-            background-color: #E57527;
-            width:100%;
-            margin:0 auto;
-            height: 150px;
-            border-radius: 10px;
-        }
-        .banner_font {
-            color:white;
-            margin: 0 auto;
-            font-family: 'greycliff_cf';
-            font-weight: bold;
-            font-size: 50px;
-            padding:60px 30px;  
-        }
-        .banner_logo {
-            position: relative;
-            top: -150px;
-            left: 30px;
-            width: 100px;
         }
     </style>
     <title>homepage</title>
 </head>
+
 <body>
 <div style="max-width: 70%; margin: 0 auto;">
     <div class="banner" style="margin:20px auto;">
         <a href="index.html">
-            <p class="banner_font">OrangePig Station
+            <p class="banner_font">OrangePig Station</p>
             <!-- <img src="images/orangepig_logo.png" class="banner_logo"> -->
-            </p>
         </a>
     </div>
     <div>
-        <h1 style="background-color: rgb(107,197,80);">Grammar</h1>
-        <p class="bar" style="border-left: 9px solid rgb(107,197,80);">
+        <h1 class="bar_title" style="background-color: rgb(107,197,80);">Grammar</h1>
+        <p class="bar_list" style="border-left: 9px solid rgb(107,197,80);">
             <a href="grammarPage/box-shadowPage.html">
                 box-shadow: An article to help you understand the features better.
             </a>
         </p>
-        <p class="bar" style="border-left: 9px solid rgb(107,197,80);">
+        <p class="bar_list" style="border-left: 9px solid rgb(107,197,80);">
             <a href="grammarPage/gradientsPage.html">
                 gradients: Teach you how to control gradients in CSS.
             </a>
         </p>
     </div>
     <div>
-        <h1 style="background-color: rgb(4,173,255);">Function</h1>
-        <p class="bar" style="border-left: 9px solid rgb(4,173,255);">
+        <h1 class="bar_title" style="background-color: rgb(4,173,255);">Function</h1>
+        <p class="bar_list" style="border-left: 9px solid rgb(4,173,255);">
             <a href="functionPage/ShowDate.html">
               ShowDate: A simple HTML to show the current time.
             </a>

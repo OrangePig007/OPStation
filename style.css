@@ -1,0 +1,82 @@
+/* 字体引用 */
+@font-face {
+    font-family: 'greycliff_cf';
+    src:url('fonts/greycliffcf-bold-webfont.ttf')format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'greycliff_cf';
+    src: url('fonts/greycliffcf-medium-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 重要元素样式 */
+a {
+    text-decoration: none !important;
+    color:black;
+}
+body {
+    font-family: 'greycliff_cf';
+}
+/* 最上方橙色Banner */
+.banner {
+    background-color: #E57527;
+    width:100%;
+    margin:0 auto;
+    min-height: 150px;
+    border-radius: 10px;
+}
+.banner_font {
+    color:white;
+    margin: 0 auto;
+    font-weight: bold;
+    font-size: 50px;
+    padding:60px 0px 30px 30px;  
+}
+.banner_logo {
+    position: relative;
+    top: -150px;
+    left: 30px;
+    width: 100px;
+}
+
+/* 基本的bar样式 */
+.bar_title {
+    color:white;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 12px;
+    width:200px;
+    text-align: center;
+    margin: 0px;
+    height: 50px;
+    line-height: 33px;
+}
+.bar_list {
+    color: black;
+    padding: 10px;
+    background-color: white;
+    margin: 0px 10px 0px 0px;
+    font-size: 20px;
+    box-shadow:1px 1px 2px 1px rgba(68, 68, 68, 0.3);
+    border-radius: 0px 4px 4px 0px;
+    position:relative;
+    top:-20px;
+}
+.bar_list:hover {
+    background-color: whitesmoke;
+}
+
+/* 右下角小贴士 */
+.tip {
+    position:fixed;
+    border:1px solid #E57527;
+    padding: 10px;
+    width: 150px;
+    border-radius: 9px;
+    bottom: 0;
+    right: 10px;
+    background-color: white;
+}
