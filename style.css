@@ -1,7 +1,7 @@
 /* 字体引用 */
 @font-face {
     font-family: 'greycliff_cf';
-    src:url('fonts/greycliffcf-bold-webfont.ttf')format('truetype');
+    src:url('fonts/greycliffcf-bold-webfont.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
 }

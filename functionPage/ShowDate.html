@@ -2,8 +2,8 @@
 <html>
     <style>
         .date_button {
-            color:#E57527;
-            border:2px solid #E57527;
+            color:rgb(4,173,255);
+            border:2px solid rgb(4,173,255);
             font-size: 20px;
             background-color: #fff;
             border-radius: 30px;
@@ -13,13 +13,13 @@
             text-align: center;
         }
         .date_button:hover {
-            box-shadow: 0px 0px 20px #e28c4e inset;
+            box-shadow: 0px 0px 20px rgb(83, 188, 240) inset;
         }
         .bar_title {
-            background-color: #E57527;
+            background-color: rgb(4,173,255);
         }
         .mes {
-            background-color: #E57527;
+            background-color: rgb(4,173,255);
             color:white;
             padding: 150px 0px;
             margin:0px auto; 
@@ -27,12 +27,23 @@
             font-size: 60px;
         }
         .bar_list {
-            border-left: 9px solid #E57527;           
+            border-left: 9px solid rgb(4,173,255);           
+        }
+        .tip {
+            border-color:rgb(4,173,255) !important;
+        }
+        .home_icon {
+            color: white;
+            font-size: 50px;
+            position: absolute;
+            top: 21px;
+            left: 30px;
         }
     </style>
     <head>
         <meta charset="utf-8" />
         <link type="text/css" rel="styleSheet" href="../style.css" />
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <title>ShowDate</title>
         <script>
             function displayDate(){
@@ -79,6 +90,11 @@
 
     <body>
     <div>
+        <div>
+            <a href="../index.html" class="home_icon">
+                <i class="fa fa-home"></i>
+            </a>             
+        </div>
         <h1 class="mes">点击下方按钮将会显示当前时间</h1>
         <p style="padding-top: 40px; margin:0 auto; text-align: center;font-size: 30px;">当前的时间为</p>
         <p id="date" style="text-align: center; font-size: 20px;"></p>
