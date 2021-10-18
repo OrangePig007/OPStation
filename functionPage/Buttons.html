@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <link type="text/css" rel="styleSheet" href="../style.css" />
+    <title>Buttons</title>
+</head>
+<style>
+    .blue_button {
+        margin: 10px auto;
+    }
+    #invis,#invis2 {
+        display: none;
+    }
+    p {
+        text-align: center;
+        font-size: 17px;
+    }
+</style>
+<script>
+    function mesbox1() {
+        alert("你要继续吗？只是出于礼貌问一下，其实你莫得选择。");
+        document.getElementById("invis").style.display="inline";
+    }
+
+    function mesbox2() {
+
+        var con = confirm("真的要继续吗？")
+        if (con==true) {
+            document.getElementById("invis2").style.display="inline";
+            document.getElementById("con").innerHTML="我保证就这最后一道题了。";
+        }
+        else {
+            document.getElementById("con").innerHTML="这就放弃了？😅";
+        }
+
+    }
+
+    function mesbox3() {
+        var greeting;
+        var name=prompt("输入你的姓名，我会送你一句祝福~")
+        if (name!=null && name!=""){
+            greeting=name+"，窝嫩叠！";
+            document.getElementById("gre").innerHTML=greeting;
+        }
+        else {
+            document.getElementById("gre").innerHTML="啥都没输入糊弄谁呢？😅";
+        }
+
+    }
+</script>
+<body>
+    <div style="max-width: 70%; margin: 0 auto;">
+        <div class="banner" style="margin:20px auto;">
+            <a href="../index.html">
+                <p class="banner_font">OrangePig Station</p>
+            </a>
+        </div>
+        <p>这是一道有趣的小测试，快来做做吧！</p>
+    
+        <div>
+            <h1 class="blue_title">Basic Message Box</h1>
+            <button type="button" onclick="mesbox1()" class="blue_button">点击</button>
+
+            <div id="invis">
+                <h1 class="blue_title">Confirm Message Box</h1>
+                <button type="button" onclick="mesbox2()" class="blue_button">点击</button>
+                <p id="con">相信我，这次你有选择了！</p>
+            </div>
+
+            <div id="invis2">
+                <h1 class="blue_title">Prompt Message Box</h1>
+                <button type="button" onclick="mesbox3()" class="blue_button">点击</button>
+                <p id="gre">这次你甚至可以自定义输入内容！</p>
+            </div>
+            
+        </div>
+    </div>
+</body>
