@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<head>
+    <title>SlideShow</title>
+    <link type="text/css" rel="styleSheet" href="../style.css" />
+    <style>
+        .container{
+            position: relative;
+
+        }
+        .container img{
+            width: 100%;
+            vertical-align: bottom;
+            border-radius: 10px;
+        }
+        .content {
+            display: none;
+            
+        }
+
+        .desp {
+            position: absolute;
+            color: #fff;
+            text-align: center;
+            font-size: 1em;
+            left: 4px;
+            bottom: 6px;
+            padding: 4px 10px;
+        }
+        .dot_group {
+            position: absolute;
+            bottom: 6px;
+            right: 8px;
+        }
+        .dot {
+            cursor:pointer;
+            height: 0.8em;
+            width: 0.8em;
+            margin: auto 3px;
+            background-color: white;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            background-color: rgba(0,0,0,0.2);
+        }
+        .prev {
+            left: 0;
+            border-radius: 0 3px 3px 0;
+        }
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+        .active, .dot:hover {
+            background-color: rgb(50, 180, 255);
+        }
+        @-webkit-keyframes fade {
+            from {opacity: .4} 
+            to {opacity: 1}
+        }
+        @keyframes fade {
+            from {opacity: .4} 
+            to {opacity: 1}
+        }
+    </style>
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("content");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1} 
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none"; 
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block"; 
+            dots[slideIndex-1].className += " active";
+        }
+    </script>
+</head>
+<body>
+    <div style="width: 50%; margin:0 auto;">
+        <div class="banner" style="margin:20px auto;">
+            <a href="../index.html">
+                <p class="banner_font">OrangePig Station</p>
+            </a>
+        </div>
+        <h1 class="bar_title" style="background-color: rgb(4,173,255);">Slide Show</h1>
+        <p class="bar_list" style="border-left: 9px solid rgb(4,173,255);"> 一个简单的幻灯片效果：小动物之星广告费结一下。</p>
+        <div class="container" style="width:100%; margin:auto;">
+            <div class="content" style="display: inline;">
+                <img src="../images/SAR/sar_harvest.jpg">
+                <div class="desp">全新丰收赛季海报</div>
+            </div>
+            <div class="content fade">
+                <img src="../images/SAR/sar_sea.jpg">
+                <div class="desp">热浪一夏赛季海报</div>
+            </div>
+            <div class="content fade">
+                <img src="../images/SAR/sar_sub1m.jpg">
+                <div class="desp">注册玩家数已达到一百万</div>
+            </div>
+            <div class="content fade">
+                <img src="../images/SAR/sar_love.jpg">
+                <div class="desp">小动物之星情人节</div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+
+            <div class="dot_group">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+    </div>
+
+</body>
