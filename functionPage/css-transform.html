@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head>
+    <title>css transform</title>
+    <style>
+        .box {
+            display: felx;
+        }
+        .block {
+            background-color: #1d1d1f;
+            /* height: 10vh;
+            line-height: 10vh;
+            padding: 5vh; */
+            width: 15vh;
+            height: 10vh;
+            border-radius: 1vh;
+            text-align: center;
+            box-sizing:border-box;
+            color: #fff;
+            transition: 0.6s ease;
+
+        }
+    </style>
+    <script>
+    function rotate(value) {
+        document.getElementById('div-rotate').style.transform= "rotate(" + value + "deg)";
+        document.getElementById('span-rotate').innerHTML= value + "deg";
+    }
+
+    function scale(value) {
+        document.getElementById('div-scale').style.transform= "scale(" + value + ")";
+        document.getElementById('span-scale').innerHTML= value;
+    }
+
+
+    </script>
+</head>
+
+<body>
+    <div class="box">
+        <h1>rotate</h1>
+        <div class="block" id="div-rotate">●</div>
+        <p>旋转</p>
+        <input type="range" min="-360" max="360" value="0" onchange="rotate(this.value)">
+        <div>transform: rotate(<span id="span-rotate">0deg</span>);</div>
+    </div>
+
+    <div class="box">
+        <h1>scale</h1>
+        <div class="block" id="div-scale">●</div>
+        <p>缩放</p>
+        <input type="range" min="-2" max="2" value="1" onchange="scale(this.value)">
+        <div>transform: scale(<span id="span-scale">1</span>);</div>
+    </div>
+
+    <!-- <div class="block" style="transform: rotate3d(1,1,-1,23deg);">●</div>  -->
+</body>

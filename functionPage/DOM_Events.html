@@ -7,17 +7,30 @@
         :root {
             font-size: 10px;
         }
+        p {
+            margin: 10px 0px;
+        }
         .square {
             background-color: rgb(4,173,255);
-            width: 200px;
+            width: 100%;
             text-align: center;
-            margin: 0 auto;
-            padding: 10px;
-            font-size: 5rem;
+            margin: 20px auto;
+            padding: 10px 0px;
             border-radius: 1rem;
             color: #fff;
             cursor: pointer;
             transition: 0.6s ease;
+            vertical-align: middle;
+        }
+        #demo {
+            font-size: 7rem;
+        }
+        #text {
+            font-size: 4rem;
+        }
+        #text2 {
+            background-color: rgb(107,197,80);
+            font-size: 3rem;
         }
     </style>
     <script>
@@ -28,15 +41,18 @@
 
             if (x>=400 && x<800) {
                 document.getElementById("demo").innerHTML="😖";
-                document.getElementById("demo").style.backgroundColor="rgb(255, 167, 4)";
+                document.getElementById("text").innerHTML="だめだめ";
+                document.getElementsByClassName("square")[0].style.backgroundColor="rgb(255, 167, 4)";
             }
             else if (x>=800 && x<1600) {
                 document.getElementById("demo").innerHTML="🥵";
-                document.getElementById("demo").style.backgroundColor="rgb(255, 42, 4)";
+                document.getElementById("text").innerHTML="行く行く";
+                document.getElementsByClassName("square")[0].style.backgroundColor="rgb(255, 42, 4)";
             }
             else if (x>=1600 ) {
                 document.getElementById("demo").innerHTML="🥴";
-                document.getElementById("demo").style.backgroundImage="-webkit-linear-gradient(left,#b116ec 0%,#ff0021 50%,#fff11e 100%)";
+                document.getElementById("text").innerHTML="やめて~";
+                document.getElementsByClassName("square")[0].style.background="-webkit-linear-gradient(left,#b116ec 0%,#ff0021 50%,#fff11e 100%)";
             }
 
         }
@@ -50,12 +66,17 @@
             </a>
         </div>
 
-
-        <div class="square" onmousemove = "myMoveFuntion()" id="demo">
-            ☺️
+        <div class="square" onmousemove = "myMoveFuntion()">
+            <p id="demo">☺️</p>
+            <p id="text">こんにちは</p>
         </div>
 
+        <div class="square" id="text2" onmouseover="this.innerHTML='Ja?'" onmouseout="this.innerHTML='Zzzz...'">
+            Schlafen...
+        </div>
 
+        <p>笔记：<br>1. move是在元素是移动就会触发；enter是进入元素才会触发；over是在子元素上切换也会触发。<br>2. leave对应enter；out对应over。<br>3. 另外还有按下down，松开up，双击dbclick。</p>
 
+    </div>
 
 </body>

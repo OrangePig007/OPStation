@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Sprite</title>
+    <link type="text/css" rel="styleSheet" href="../style.css" />
+    <style>
+        .container {
+            position: relative;
+            box-sizing: border-box;
+            height: 195px;
+            background-image: linear-gradient(179deg, #292f3b 2%, #242933);
+            box-shadow: 8px 8px 20px 0 rgb(18 21 26 / 60%), -8px -8px 20px 0 rgb(54 62 77 / 50%), inset 0 4px 20px 0 rgb(36 41 51 / 50%);
+            border-radius: 4px;
+            padding: 44px 20px 0;
+            transition: all .4s ease-in-out;
+        }
+
+        .container:hover {
+            background: #242933;
+            box-shadow: inset 8px 8px 20px 0 rgb(18 21 26 / 60%), inset -8px -8px 20px 0 rgb(54 62 77 / 50%);
+        }
+
+        .sprite {
+            background-image: url("../images/Sprite/cloud1.png");
+            /* position: absolute;
+        left: 50%;
+        top: -30px;
+        margin-left: -30px; */
+            width: 120px;
+            height: 120px;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position: top;
+        }
+
+        .sprite:hover {
+            /* animation: play 0.3s steps(16) forwards; */
+            animation-name: play;
+            animation-duration: 0.3s;
+            animation-timing-function: steps(16);
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes play {
+            0% {
+                background-position: 0% 0%;
+            }
+
+            100% {
+                background-position: 0% 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div style="width: 50%; margin:0 auto;">
+        <div class="banner" style="margin:20px auto;">
+            <a href="../index.html">
+                <p class="banner_font">OrangePig Station</p>
+            </a>
+        </div>
+        <div class="sprite" style="margin:0 auto;"></div>
+    </div>
+
+</body>
