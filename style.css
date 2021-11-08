@@ -1,10 +1,12 @@
 /* 字体引用 */
+
 @font-face {
     font-family: 'greycliff_cf';
-    src:url('fonts/greycliffcf-bold-webfont.ttf') format('truetype');
+    src: url('fonts/greycliffcf-bold-webfont.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'greycliff_cf';
     src: url('fonts/greycliffcf-medium-webfont.ttf') format('truetype');
@@ -12,29 +14,41 @@
     font-style: normal;
 }
 
+
 /* 重要元素样式 */
+
+* {
+    margin: 0;
+}
+
 a {
     text-decoration: none !important;
-    color:black;
+    color: black;
 }
+
 body {
     font-family: 'greycliff_cf';
 }
+
+
 /* 最上方橙色Banner */
+
 .banner {
     background-color: #E57527;
-    width:100%;
-    margin:0 auto;
+    width: 100%;
+    margin: 0 auto;
     min-height: 150px;
     border-radius: 10px;
 }
+
 .banner_font {
-    color:white;
+    color: white;
     margin: 0 auto;
     font-weight: bold;
     font-size: 50px;
-    padding:60px 0px 30px 30px;  
+    padding: 60px 0px 30px 30px;
 }
+
 .banner_logo {
     position: relative;
     top: -150px;
@@ -42,38 +56,44 @@ body {
     width: 100px;
 }
 
+
 /* 基本的bar样式 */
+
 .bar_title {
-    color:white;
+    color: white;
     font-weight: bold;
     border-radius: 8px;
     padding: 12px;
-    width:200px;
+    width: 200px;
     text-align: center;
     margin: 0px;
     height: 50px;
     line-height: 33px;
 }
+
 .bar_list {
     color: black;
     padding: 10px;
     background-color: white;
     margin: 0px 10px 0px 0px;
     font-size: 20px;
-    box-shadow:1px 1px 2px 1px rgba(68, 68, 68, 0.3);
+    box-shadow: 1px 1px 2px 1px rgba(68, 68, 68, 0.3);
     border-radius: 0px 4px 4px 0px;
-    position:relative;
-    top:-20px;
+    position: relative;
+    top: -20px;
     width: calc(100% - 30px);
 }
+
 .bar_list:hover {
     background-color: whitesmoke;
 }
 
+
 /* 右下角小贴士 */
+
 .tip {
-    position:fixed;
-    border:1px solid #E57527;
+    position: fixed;
+    border: 1px solid #E57527;
     padding: 10px;
     width: 150px;
     border-radius: 9px;
@@ -82,28 +102,34 @@ body {
     background-color: white;
 }
 
+
 /* 蓝色按钮(无margin) */
+
 .blue_button {
-    color:rgb(4,173,255);
-    border:2px solid rgb(4,173,255);
+    color: rgb(4, 173, 255);
+    border: 2px solid rgb(4, 173, 255);
     font-size: 20px;
     border-radius: 30px;
-    width:100px;
+    width: 100px;
     text-align: center;
     font-weight: bold;
     padding: 10px;
     background-color: white;
     display: block;
 }
+
 .blue_button:hover {
     box-shadow: 0px 0px 20px #66e8ff inset;
 }
+
+
 /* 蓝色title */
+
 .blue_title {
-    border-left: 6px solid rgb(4,173,255);
+    border-left: 6px solid rgb(4, 173, 255);
     padding: 12px;
     background-color: rgb(224, 245, 255);
     margin: 20px 0px;
     font-weight: bold;
-    font-size:20px;
+    font-size: 20px;
 }
